@@ -2,6 +2,12 @@
 FROM node:14 
 # estou falando que meu diretório de trabalho é a pasta app
 WORKDIR /app
+# estou definindo uma variavel com um valor apenas em tempo de execução desse script
+ARG PORT=3000
+# estou falando que a variavel de ambiente vai ter o seu valor alterado para o valor atribuido a variável $PORT
+ENV PORT=$PORT
+# estou informando para quem consumir minha imagem que a porta é 3000
+EXPOSE $PORT
 # estou copiando tudo que está na raiz desse projeto e jogando para dentro do meu workdir(raiz)
 COPY . .
 # estou instalando as dependencias do sistema

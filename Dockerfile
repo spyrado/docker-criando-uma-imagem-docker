@@ -1,6 +1,6 @@
 # estou baixando uma imagem de node na versão 14
 FROM node:14 
-# estou falando que meu diretório de trabalho é a pasta app
+# estou falando que meu diretório de trabalho é a pasta app, ele cria a pasta que voce definir, no caso /app
 WORKDIR /app
 # estou definindo uma variavel com um valor apenas em tempo de execução desse script
 ARG PORT=3000
